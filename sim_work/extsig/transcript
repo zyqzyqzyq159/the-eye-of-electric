@@ -1,0 +1,29 @@
+# vsim -c extsig_tb -do "run 450ms; quit -f" 
+# Start time: 20:52:40 on Oct 21,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: top_sim.v(308): (vopt-2241) Connection width does not match width of port 'meas_chan'. The port definition is at: C:/Users/hp/Desktop/FPGA/AL_TRY/uisrc/01_rtl/user_input.v(54).
+# ** Warning: top_sim.v(327): (vopt-2241) Connection width does not match width of port 'meas_chan'. The port definition is at: C:/Users/hp/Desktop/FPGA/AL_TRY/uisrc/01_rtl/ws2812.v(36).
+# //  ModelSim SE-64 10.6d Feb 24 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.extsig_tb(fast)
+# run 450ms
+# [52200000000] func_mode=2
+# dumped ext_s1_typ.ppm
+# csv ext_s1_typ.csv  rms_va=144 freq=499 dc=2099 amp_param=819.000000 dc_param=2100.000000 wfsmpl=3413 wfcap=3413 wf_wr=341 tog=3413 sp=3413 recwr=3413
+# dumped ext_s2_big.ppm
+# csv ext_s2_big.csv  rms_va=144 freq=499 dc=2083 amp_param=1638.000000 dc_param=2048.000000 wfsmpl=5545 wfcap=5545 wf_wr=425 tog=5545 sp=5545 recwr=5545
+#  quit -f
+# End time: 20:53:32 on Oct 21,2026, Elapsed time: 0:00:52
+# Errors: 0, Warnings: 2

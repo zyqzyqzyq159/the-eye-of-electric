@@ -1,0 +1,11 @@
+AL_TRY_Runs/
+sim_work/**/work*/
+sim_work/**/*.ppm
+sim_work/**/*.png
+sim_work/**/*.csv
+sim_work/**/*.log
+sim_work/**/*.wlf
+sim_work/**/vsim.db
+*.log
+*.wlf
+*.jou

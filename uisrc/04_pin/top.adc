@@ -1,0 +1,56 @@
+set_pin_assignment { SYSCLK_25M } { LOCATION = P34; IOSTANDARD = LVCMOS33; }
+
+set_pin_assignment { ADC_SCLK } { LOCATION = P41; IOSTANDARD = LVCMOS33; }
+set_pin_assignment { ADC_CS_N } { LOCATION = P40; IOSTANDARD = LVCMOS33; }
+set_pin_assignment { ADC_MISO } { LOCATION = P37; IOSTANDARD = LVCMOS33; }
+set_pin_assignment { ADC_MOSI } { LOCATION = P38; IOSTANDARD = LVCMOS33; }
+
+# HDMI TMDS: LVDS33_E differential output, only P pin constrained, N pin auto-paired by TD
+# Channel map same as vendor demo: TX[0]=blue(P47), TX[1]=green(P49), TX[2]=red(P61), CLK=P55
+set_pin_assignment { HDMI_TX_P[0] } { LOCATION = P47; IOSTANDARD = LVDS33_E; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { HDMI_TX_P[1] } { LOCATION = P49; IOSTANDARD = LVDS33_E; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { HDMI_TX_P[2] } { LOCATION = P61; IOSTANDARD = LVDS33_E; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { HDMI_CLK_P }   { LOCATION = P55; IOSTANDARD = LVDS33_E; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+
+set_pin_assignment { LED[0] } { LOCATION = P62; IOSTANDARD = LVCMOS33; }
+set_pin_assignment { LED[1] } { LOCATION = P59; IOSTANDARD = LVCMOS33; }
+set_pin_assignment { LED[2] } { LOCATION = P57; IOSTANDARD = LVCMOS33; }
+set_pin_assignment { LED[3] } { LOCATION = P52; IOSTANDARD = LVCMOS33; }
+set_pin_assignment { LED[4] } { LOCATION = P51; IOSTANDARD = LVCMOS33; }
+set_pin_assignment { LED[5] } { LOCATION = P2;  IOSTANDARD = LVCMOS33; }
+set_pin_assignment { LED[6] } { LOCATION = P3;  IOSTANDARD = LVCMOS33; }
+set_pin_assignment { LED[7] } { LOCATION = P14; IOSTANDARD = LVCMOS33; }
+
+set_pin_assignment { BTN_SW2 }  { LOCATION = P31; IOSTANDARD = LVCMOS33; }
+set_pin_assignment { BTN_SW3 }  { LOCATION = P30; IOSTANDARD = LVCMOS33; }
+
+# 按键板（J4 引出至 2x10 IDC，低有效、外接 10k 上拉；排针位置见注释）
+set_pin_assignment { BTN_FUNC }   { LOCATION = P32; IOSTANDARD = LVCMOS33; }   # J4-7  功能模式
+set_pin_assignment { BTN_VIEW }   { LOCATION = P33; IOSTANDARD = LVCMOS33; }   # J4-8  显示模式
+set_pin_assignment { BTN_FREEZE } { LOCATION = P12; IOSTANDARD = LVCMOS33; }   # J4-9  定格
+set_pin_assignment { BTN_SEL1 }   { LOCATION = P13; IOSTANDARD = LVCMOS33; }   # J4-10 情境键1
+set_pin_assignment { BTN_SEL2 }   { LOCATION = P29; IOSTANDARD = LVCMOS33; }   # J4-11 情境键2
+set_pin_assignment { BTN_SEL3 }   { LOCATION = P28; IOSTANDARD = LVCMOS33; }   # J4-12 情境键3
+set_pin_assignment { ENC1_CHA }   { LOCATION = P10; IOSTANDARD = LVCMOS33; }   # J4-13 时基 A
+set_pin_assignment { ENC1_CHB }   { LOCATION = P11; IOSTANDARD = LVCMOS33; }   # J4-14 时基 B
+set_pin_assignment { ENC2_CHA }   { LOCATION = P70; IOSTANDARD = LVCMOS33; }   # J4-15 平移 A
+set_pin_assignment { ENC2_CHB }   { LOCATION = P71; IOSTANDARD = LVCMOS33; }   # J4-16 平移 B
+set_pin_assignment { ENC3_CHA }   { LOCATION = P86; IOSTANDARD = LVCMOS33; }   # J4-17 垂直位置 A
+set_pin_assignment { ENC3_CHB }   { LOCATION = P87; IOSTANDARD = LVCMOS33; }   # J4-18 垂直位置 B
+set_pin_assignment { ENC4_CHA }   { LOCATION = P64; IOSTANDARD = LVCMOS33; }   # J4-19 垂直缩放 A
+set_pin_assignment { ENC4_CHB }   { LOCATION = P63; IOSTANDARD = LVCMOS33; }   # J4-20 垂直缩放 B
+set_pin_assignment { WS2812_DIN } { LOCATION = P5;  IOSTANDARD = LVCMOS33; }   # J4-21 RGB 灯链
+
+# 编码器按压复位（J5 空闲脚引出，低有效、外接 10k 上拉；与按键板共 GND）
+set_pin_assignment { ENC1_SW } { LOCATION = P35; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; }   # J5-5  时基复位（按键板无外部上拉：平时悬空，靠内部弱上拉）
+set_pin_assignment { ENC3_SW } { LOCATION = P44; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; }   # J5-8  垂直位置复位（同上）
+set_pin_assignment { ENC4_SW } { LOCATION = P66; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; }   # J5-21 垂直量程复位（同上）
+
+
+set_pin_assignment { BUZZER } { LOCATION = P27; IOSTANDARD = LVCMOS33; }
+
+set_pin_assignment { UART_TXD } { LOCATION = P17; IOSTANDARD = LVCMOS33; }
+set_pin_assignment { UART_RXD } { LOCATION = P16; IOSTANDARD = LVCMOS33; }
+
+set_pin_assignment { I2C_SDA } { LOCATION = P39; IOSTANDARD = LVCMOS33; }
+set_pin_assignment { I2C_SCL } { LOCATION = P42; IOSTANDARD = LVCMOS33; }
